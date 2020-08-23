@@ -6,15 +6,6 @@ const quest = function(message, command, args) {
     var api = 'http://www.pokemapthe.world:8000/stop.php?'
 
     input.target = args.join(' ');
-    if (config.regions[args[0]]) {
-        //first arg is the region
-        server = args.shift();
-        input.target = args.join(' ');
-    }
-    if (config.regions[server]) {
-        customRegion = true;
-        input.region = config.regions[server];
-    }
 
     var options = {
         method: 'GET',
