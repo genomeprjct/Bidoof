@@ -1,0 +1,46 @@
+{
+  "name": "Bidoof",
+  "version": "1.0.0",
+  "description": "Discord bot to provide mapping, questing and pinging support",
+  "main": "bidoof-api.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "discord.js": "^11.4.2",
+    "express": "^4.16.4",
+    "qs": "^6.6.0",
+    "sqlite3": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "pre-commit": "^1.2.2"
+  },
+  "scripts": {
+    "lint": "eslint ./src/*",
+    "test": "jest",
+    "ci": "npm run lint && npm run test -- --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rly/PoGo-Gym-Mapper.git"
+  },
+  "keywords": [
+    "pokemongo",
+    "discord"
+  ],
+  "author": "Ryan Ly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rly/PoGo-Gym-Mapper/issues"
+  },
+  "homepage": "https://github.com/rly/PoGo-Gym-Mapper#readme"
+}
