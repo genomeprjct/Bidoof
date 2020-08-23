@@ -118,7 +118,7 @@ client.on("message", async message => {
                     res.data.pokemons.forEach(q => {
                         counter++;
                         buffer += `${q.lat},${q.lng}\n`
-                        if (counter % 30 == 0) {
+                        if (counter % 30 === 0) {
                             buffer += '```'
                             message.reply(buffer);
                             buffer = '```';
