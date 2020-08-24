@@ -11,7 +11,7 @@ const addPokemon = function(msg, args) {
     if (pokemonName === "") return;
 
     if (pokemon) {
-        if (msg.member.roles.some(role => role.name === pokemonName)) {
+        if (msg.member.roles.some(role => role.name.toLowerCase() === pokemonName)) {
             pokemonMsg = new Discord.RichEmbed()
                 .setColor(0x7FDF37)
                 .setTitle(`${msg.member.user.tag} You already have the **${pokemon.name}** role.`);
