@@ -10,6 +10,7 @@ const help = require("./commands/help")
 const ping = require("./commands/ping")
 const rdmQuests = require("./commands/rdm-quest")
 const mapper = require("./commands/map")
+const roles = require("./commands/roles")
 
 // Create the main client object with methods to interface with Discord
 const client = new Discord.Client();
@@ -176,6 +177,14 @@ client.on("message", async message => {
     // e.g. +whereis washington's crossing
     if (command === "where" || command === "whereis" || command === "map") {
         mapper.doMap(message, command, args, client);
+    }
+
+    if (command === "want") {
+        roles.addPokemon(message, args)
+    }
+
+    if (command === "unwant") {
+        roles.removePokemon(message, args)
     }
 
 });
