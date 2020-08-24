@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 
 const addPokemon = function(msg, args) {
     let pokemonName = args[0].toLowerCase();
