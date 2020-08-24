@@ -4,7 +4,7 @@ const dragon = q => q.rewards_string == '3 Rare Candies' && q.conditions_string=
 const dragonDust = q => q.conditions_string=='Catch 1 Pokémon (Type: Dragon)'
 const d4d = q => q.rewards_string == 'Pokémon Encounter: Dratini' && q.conditions_string=='Catch 1 Pokémon (Type: Dragon)'
 const axios = require('axios')
-const sorter = require('utils').sorter;
+const sorter = require('./utils').sorter;
 
 const mad = function(message, args) {
     console.log(`${new Date()} nycmap ${args.join(' ')} ${message.author.username}`)

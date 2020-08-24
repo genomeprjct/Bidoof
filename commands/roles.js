@@ -1,7 +1,5 @@
 const Discord = require("discord.js");
 
-const teams = {};
-
 const addPokemon = function(msg, args) {
     let pokemonName = args[0].toLowerCase();
     let pokemon = msg.guild.roles.find(role => role.name.toLowerCase() === pokemonName);
