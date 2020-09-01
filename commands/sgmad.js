@@ -8,11 +8,11 @@ const axios = require('axios')
 const sorter = require('./utils').sorter;
 
 const mad = function(message, args) {
-    console.log(`${new Date()} nycmap ${args.join(' ')} ${message.author.username}`)
+    console.log(`${new Date()} sgmap ${args.join(' ')} ${message.author.username}`)
     var param = args.join(' ')
 
     var filter = gt
-    var nycurl = 'https://nycpokemap.com/quests.php?quests%5B%5D=7%2C0%2C113&quests%5B%5D=7%2C0%2C147&quests%5B%5D=7%2C0%2C246&quests%5B%5D=7%2C0%2C290&quests%5B%5D=2%2C0%2C1301'
+    var nycurl = 'https://sgpokemap.com/quests.php?quests%5B%5D=7%2C0%2C113&quests%5B%5D=7%2C0%2C147&quests%5B%5D=7%2C0%2C246&quests%5B%5D=7%2C0%2C290&quests%5B%5D=2%2C0%2C1301'
 
     if (param == 'ditto') {
         filter = ditto
@@ -21,16 +21,16 @@ const mad = function(message, args) {
     } else if (param == 'd4d') {
         filter = d4d
     } else if (param == 'dragon-dust') {
-        nycurl = 'https://nycpokemap.com/quests.php?quests%5B%5D=7%2C0%2C290&quests%5B%5D=3%2C1500%2C0&quests%5B%5D=3%2C1000%2C0'
+        nycurl = 'https://sgpokemap.com/quests.php?quests%5B%5D=7%2C0%2C290&quests%5B%5D=3%2C1500%2C0&quests%5B%5D=3%2C1000%2C0'
         filter = dragonDust
     } else if (param == 'venusaur-energy') {
-        nycurl = 'https://nycpokemap.com/quests.php?quests%5B%5D=7%2C0%2C290&quests%5B%5D=12%2C0%2C3&time=1598931609000'
+        nycurl = 'https://sgpokemap.com/quests.php?quests%5B%5D=7%2C0%2C290&quests%5B%5D=12%2C0%2C3&time=1598931609000'
         filter = truth;
     } else if (param == 'blastoise-energy') {
-        nycurl = 'https://nycpokemap.com/quests.php?quests%5B%5D=7%2C0%2C290&quests%5B%5D=12%2C0%2C9&time=1598931665855'
+        nycurl = 'https://sgpokemap.com/quests.php?quests%5B%5D=7%2C0%2C290&quests%5B%5D=12%2C0%2C9&time=1598931665855'
         filter = truth;
     } else if (param == 'charizard-energy') {
-        nycurl = 'https://nycpokemap.com/quests.php?quests%5B%5D=7%2C0%2C290&quests%5B%5D=12%2C0%2C6&time=1598931698392'
+        nycurl = 'https://sgpokemap.com/quests.php?quests%5B%5D=7%2C0%2C290&quests%5B%5D=12%2C0%2C6&time=1598931698392'
         filter = truth;
     }
 

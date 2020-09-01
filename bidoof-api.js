@@ -6,6 +6,7 @@ const axios = require('axios');
 const utils = require("./utils");
 const rareSpawns = require("./commands/rare-spawns");
 const mad = require("./mad");
+const sgmad = require("./commands/sgmad")
 const help = require("./commands/help")
 const ping = require("./commands/ping")
 const rdmQuests = require("./commands/rdm-quest")
@@ -91,6 +92,10 @@ client.on("message", async message => {
 
     if (command === "nycmap") {
         mad.mad(message, args);
+    }
+
+    if (command === "sgmap") {
+        sgmad.mad(message, args);
     }
 
     if (command === "quest" || command === "q" || command === "qgpx") {
