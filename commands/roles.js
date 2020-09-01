@@ -54,7 +54,7 @@ const removePokemon = function(msg, args) {
     let pokemonMsg;
 
     if (pokemon) {
-        if (msg.member.roles.some(pokemon => pokemonName === pokemon.name)) {
+        if (msg.member.roles.some(pokemon => pokemonName === pokemon.name.toLowerCase())) {
             user.removeRole(pokemon).catch(console.error);
             pokemonMsg = new Discord.RichEmbed()
                 .setColor(0x7FDF37)

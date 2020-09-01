@@ -1,4 +1,5 @@
 var request = require('request');
+const gmapsUrlBase = 'https://www.google.com/maps/place/';
 
 const quest = function(message, command, args) {
     console.log(`${new Date()} quest ${args.join(' ')} ${message.author.username}`);
