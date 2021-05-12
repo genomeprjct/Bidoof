@@ -9,10 +9,11 @@
 
 const rareSpawnMessage = (msg) => {
     if(msg.embeds[0]) {
-        let pokemonName = msg.embeds[0].fields[0].name.split("**")[1].toLowerCase();
-        let pokemonRole = msg.guild.roles.find(role => role.name.toLowerCase() === pokemonName);
-        let locationName = msg.embeds[0].fields[1].name.split("|")[0];
-
+        let text = msg.embeds[0].description;
+        let pokemonName = text.split(" ")[0].toLowerCase();
+        let pokemonRole = msg.guild.roles.cache.find(role =>pokemonName.startsWith( role.name.toLowerCase() ))
+        let locationName = msg.embeds[0].title;
+        
         console.log(`${pokemonName} ${pokemonRole} ${locationName}`);
 
         if (pokemonRole) {
