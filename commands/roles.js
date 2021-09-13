@@ -30,6 +30,7 @@ const addPokemon = function(msg, args) {
         }
     } else if (isValidPoke(pokemonName)) {
         // Create a new role with data
+        console.log(`creating role ${pokemonName}`);
         msg.guild.roles.create({
             name: pokemonName,
             color: 'BLUE',
