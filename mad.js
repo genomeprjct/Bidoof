@@ -1,8 +1,8 @@
 const gt = q => q.rewards_string == '3 Rare Candies' && q.conditions_string=='Make 3 Great Curveball Throws in a row'
-const ditto = q => q.rewards_string == '3 Rare Candies' && q.conditions_string=='Catch 1 Pokémon (Ditto)'
-const dragon = q => q.rewards_string == '3 Rare Candies' && q.conditions_string=='Catch 1 Pokémon (Type: Dragon)'
-const dragonDust = q => q.conditions_string=='Catch 1 Pokémon (Type: Dragon)'
-const d4d = q => q.rewards_string == 'Pokémon Encounter: Dratini' && q.conditions_string=='Catch 1 Pokémon (Type: Dragon)'
+const ditto = q => q.rewards_string == '3 Rare Candies' && q.conditions_string=='Catch a Ditto'
+const dragon = q => q.rewards_string == '3 Rare Candies' && q.conditions_string=='Catch a Dragon-type Pokémon'
+const dragonDust = q => q.conditions_string=='Catch a Dragon-type Pokémon'
+const d4d = q => q.rewards_string == 'Pokémon Encounter: Dratini' && q.conditions_string=='Catch a Dragon-type Pokémon'
 const truth = q => true;
 const axios = require('axios')
 const sorter = require('./utils').sorter;
